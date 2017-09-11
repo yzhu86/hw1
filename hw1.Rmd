@@ -1,4 +1,4 @@
-Homework 1 - [Your team name here]
+Homework 1 - [YI ZHU]
 ========================================================
 
 ### Task 1 - Implementation
@@ -14,7 +14,80 @@ and your writeup matter for your overall grade.
 ```{r}
 fizzbuzz = function(v)
 {
-
+  if (is.numeric(v)){
+    if (length(v)==1){
+      if(is.finite(v)){
+       
+          if (v %% 1 == 0){
+            if (v%%3==0&v%%5==0){
+              print("FizzBuzz")
+            }
+            else if (v%%3==0){
+              print("Fizz")
+            }
+            else if (v%%5==0){
+              print ("Buzz")
+            }
+            else{
+              print(v)
+            }
+          }
+          else{
+            print("invalid:decimal number")
+          }
+        }
+        
+      else{
+        print("invalid: infinite number")
+      }
+    }
+    else{
+    
+      for (i in v){
+        if (is.finite(i)){
+          
+            if (i%%1==0){
+              if (i%%5==0&i%%3==0){
+                print("FizzBuzz")
+              }
+              else if(i%%3==0){
+                print ("Fizz")
+              }
+              else if(i%%5==0){
+                print ("Buzz")
+              }
+              else{
+                print(i)
+              }
+            }
+            else{
+              print("invalid: decimal number")
+            }
+          
+        }
+        else{
+          print("invalid: infinite number")
+        }
+      }
+      
+    }
+  }
+  
+  
+  
+  else{
+    if (is.complex(v)){
+      print("invalid: complex")
+    }
+    else if (is.character(v)){
+      print("invalid: character")
+    }
+  }
+    
+  
+      
+  
+  
 }
 ```
 
@@ -47,6 +120,9 @@ fizzbuzz("A")
 fizzbuzz(1.5)
 fizzbuzz(1i)
 fizzbuzz(4i)
+
+fizzbuzz(-6:3)
+
 ```
 
 
